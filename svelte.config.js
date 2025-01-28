@@ -1,8 +1,5 @@
 import adapter from "@sveltejs/adapter-static";
 
-const dev = process.env.NODE_ENV === 'development';
-const repoName = 'currency-converter';
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -12,7 +9,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: dev ? '' : `/${repoName}`
+			base: process.env.NODE_ENV === 'development' ? '' : `/currency-converter/`
 		}
 	}
 };
