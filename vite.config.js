@@ -3,5 +3,5 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
-	base: process.env.NODE_ENV === 'development' ? '/' : `/currency-converter/`
+	base: process.env.NODE_ENV === 'development' ? '/' : '/currency-converter'
 });
